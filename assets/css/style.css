@@ -1,0 +1,737 @@
+/*
+
+Sito di riferimento "https://labarraca.nl/home-en#home"
+La Barraca
+
+01 - General setting
+      - Arrow TOP
+      - Btn fixed
+02 - Header
+      - Navbar
+      - Video Background
+      - Text Header
+      - Media Queries
+03 - Gallery
+      - gallery 01
+      - gallery 02
+      - gallery 03
+      - Media Queries
+04 - Reviews
+      - Media Queries
+05 - About
+      - Media Queries
+06 - Booking
+07 - Gallery instagram
+      - Media Queries
+08 - Footer
+      - Media Queries
+09 - Modal Order NOW
+      - Form
+      - Container Menu
+10 - Modal Book a Table
+      - Accordion
+
+      PAGINA CONTATTI
+
+01 - Header
+02 - Form
+      - Media Queries
+
+*/
+
+
+/*--------------------------
+      General setting
+----------------------------*/
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+body{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      color: #333;
+}
+a:hover{
+      text-decoration: none;
+}
+/*--------Arrow TOP---------*/
+.top{
+      position: fixed;
+      bottom: 4%;
+      left: 3%;
+      background-color: #f0b909;
+      padding: 10px;
+      z-index: 1;
+}
+/*--------Btn fixed---------*/
+.container-btn-fixed{
+      position: fixed;
+      width: 300px;
+      height: 40px;
+      bottom: 1.5%;
+      right: 1%;
+      box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+}
+.container-btn-fixed a{
+      color: #666;
+      font-size: .8em;
+      font-weight: 700;
+      text-align: center;
+      background-color: #fff;
+}
+.container-btn-fixed a:hover{
+      background-color: rgb(238, 236, 236);
+}
+.container-btn-fixed a:nth-child(1){
+      border-radius: 4px 0 0 4px;
+      padding: 10px 0;
+}
+.container-btn-fixed a:nth-child(2){
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 10px 0;
+}
+.container-btn-fixed a:nth-child(3){
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      border-radius: 0 4px 4px 0;
+      padding: 8px 0;
+}
+/*--------------------------
+            Header
+----------------------------*/
+header{
+      display: block;
+}
+/*----------NAVBAR----------*/
+.navbar{
+      display: flex;
+      justify-content: space-around !important;
+}
+.navbar ul li .order{
+      background-color: #f0b909;
+      font-size: 0.8em;
+      color: #000 !important;
+}
+.navbar-brand{
+      text-align: center;
+      font-size: 2em;
+      font-weight: 800;
+}
+.navbar-brand span{
+      font-size: 12px;
+      font-weight: 100;
+}
+.m-border-bottom{
+      border-bottom: 3px solid #fff;
+}
+/*-----VIDEO BACKGROUND-----*/
+.m-background-video{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -2;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+}
+.m-background-video .video{
+      background-size: cover;
+      background-position: 50% 50%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -100;
+}
+/*-------TEXT-HEADER---------*/
+.text-header{
+      position: absolute;
+      width: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+}
+.text-header h5{
+      color: #f0b909;
+      font-weight: 700;
+      font-size: 2em;
+}
+.text-header h1{
+      color: #fff;
+      font-weight: 800;
+      font-size: 5em;
+}
+.text-header a {
+      border: 3px solid #f0b909;
+      color: #fff;
+      margin-top: 40px;
+      padding: 17px 20px;
+      font-size: 1.2em;
+      font-weight: 700;
+}
+.text-header a:hover{
+      background-color: #f0b909;
+      color: #000;
+}
+
+/*---------MEDIA QUERIES---------*/
+
+@media (max-width: 575.98px) { 
+      .text-header h5{
+            font-size: 1.1em;
+      }      
+      .text-header h1{
+            font-size: 2em;
+      }
+      .text-header a {
+            padding: 7px 10px;
+            font-size: 0.8em;
+      }      
+ }
+@media (min-width: 576px) and (max-width: 767.98px) { 
+      .text-header h5{
+            font-size: 1.7em;
+      }      
+      .text-header h1{
+            font-size: 3em;
+      }
+}
+@media (min-width: 768px) and (max-width: 991.98px) { 
+      .text-header h1{
+            font-size: 4em;
+      }      
+ }
+ /*--------------------------
+            Gallery
+----------------------------*/
+.space{
+      height: 91.5vh;
+}
+.gallery-column-1,
+.gallery-column-2,
+.gallery-column-3{     
+      height: 100vh;
+}
+/*-------Gallery-01---------*/
+.gallery-column-1 .img-1{
+      width: 100%;
+      height: 15%;
+      background-image: url(../img/5d250f34b33172370bd28531_Schermafbeelding\ 2019-07-09\ om\ 23.58.45.png);
+      background-position: 50% 50%;
+      background-size: cover;
+}
+.gallery-column-1 .img-2{
+      width: 100%;
+      height: 30%;
+      background-image: url(../img/5d250c77b331723c15d256bb_Schermafbeelding\ 2019-07-09\ om\ 23.50.48.png);
+      background-position: 50% 50%;
+      background-size: cover;
+}
+.gallery-column-1 .img-3{
+      width: 100%;
+      height: 50%;
+      background-image: url(../img/5d250acf82791f033c1952db_Schermafbeelding\ 2019-07-08\ om\ 22.40.07.png);
+      background-position: 50% 50%;
+      background-size: cover;
+}
+/*-------Gallery-02---------*/
+.gallery-column-2 .img-1{
+      width: 100%;
+      height: 25%;
+      background-image: url(../img/5d250ec5b3317276b0d28434_Schermafbeelding\ 2019-07-09\ om\ 23.59.49.png);
+      background-position: 50% 50%;
+      background-size: cover;
+}
+.gallery-column-2 .img-2{
+      width: 100%;
+      height: 30%;
+      background-image: url(../img/5d250ded6ad064fba4481174_Schermafbeelding\ 2019-07-09\ om\ 23.54.57.png);
+      background-position: 50% 50%;
+      background-size: cover;
+}
+.gallery-column-2 .img-3{
+      width: 100%;
+      height: 40%;
+      background-image: url(../img/5d250d7582791f1133195c06_Schermafbeelding\ 2019-07-09\ om\ 23.54.40.png);
+      background-position: 50% 50%;
+      background-size: cover;
+}
+/*-------Gallery-03---------*/
+.gallery-column-3 .img-1{
+      width: 100%;
+      height: 40%;
+      background-image: url(../img/5d23aa6e7bf99fde6bbbe0d4_Schermafbeelding\ 2019-07-08\ om\ 22.40.29.png);
+      background-position: 50% 50%;
+      background-size: cover;
+}
+.gallery-column-3 .img-2{
+      width: 100%;
+      height: 25%;
+      background-image: url(../img/5d250f08da6c39e2deeae915_Schermafbeelding\ 2019-07-09\ om\ 23.59.28.png);
+      background-position: 50% 50%;
+      background-size: cover;
+}
+.gallery-column-3 .img-3{
+      width: 100%;
+      height: 30%;
+      background-image: url(../img/5d76a448b9339d539725a20e_7516749056_IMG_0288.jpeg);
+      background-position: 50% 50%;
+      background-size: cover;
+}
+/*---------MEDIA QUERIES---------*/
+@media (max-width: 767.98px)  {
+      .gallery-column-3{
+            display: none !important;
+      }
+}
+ /*--------------------------
+            Reviews
+----------------------------*/
+.reviews h1{
+      font-weight: 800;
+      font-size: 2.2em;
+}
+.reviews hr{
+      width: 30%;
+      border: 2px solid #000;
+      margin-top: 0;
+      margin-bottom: 50px;
+}
+.reviews .reviews-items{
+      height: 400px;
+}
+.reviews .reviews-items .reviews-img{
+      width: 20%;
+}
+/*---------MEDIA QUERIES---------*/
+@media (min-width: 768px) { 
+      .reviews h1{
+            font-weight: 800;
+            font-size: 2.5em;
+      }    
+      .reviews hr{
+            width: 20%;
+            margin-bottom: 100px;
+      }      
+      .reviews .reviews-items .reviews-img{
+            width: 40%;
+      }        
+ }
+@media (min-width: 992px) { 
+      .reviews .reviews-items .reviews-img{
+            width: 30%;
+      } 
+      .reviews hr{
+            width: 12%;
+            margin-bottom: 100px;
+      }             
+}
+ /*--------------------------
+            About
+----------------------------*/
+.about{
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+}
+.about-img{
+      height: 100vh;
+      width: 100%;
+      background-image: url(../img/img-desc.png);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+.about .about-text{
+      padding: 2em;
+}
+.about .about-text h1{
+      font-weight: 800;
+      text-align: center;
+      padding-top: 50px;
+}
+.about .about-text p{
+      line-height: 30px;
+      font-weight: 400;
+      font-size: 0.9em;
+}
+/*---------MEDIA QUERIES---------*/
+@media (min-width: 768px) { 
+      .about .about-text p{
+            font-weight: 600;
+            font-size: 1em;
+      }         
+}
+@media (min-width: 992px) { 
+      .about .about-text{
+            padding: 7em;
+      }
+      .about .about-text h1{
+            text-align: left;
+            padding-top: 0px;
+      }   
+}
+ /*--------------------------
+            Booking
+----------------------------*/
+.booking h2{
+      margin-top: 50px;
+      font-weight: 800;
+}
+.booking h4{
+      font-weight: 600;
+}
+.booking hr{
+      width: 30%;
+      border: 2px solid #000;
+      margin: 0 auto;
+      margin-bottom: 50px;
+}
+.booking .booking-items .item1,
+.booking .booking-items .item2{
+      margin-bottom: 50px;
+      height: 200px;
+}
+.booking .booking-items .item1 a,
+.booking .booking-items .item2 a{
+      border: 3px solid #000;
+      padding: 10px 20px;
+      font-weight: 600;
+      text-align: center;
+}
+.booking .booking-items .item1 a{
+      background-color: #000;
+      color: #fff;
+      width: 140px;
+}
+.booking .booking-items .item2 a{
+      color: #000;
+      width: 170px;
+}
+ /*--------------------------
+      Gallery - Instagram
+----------------------------*/
+.gallery-insta .m-width{
+      width: 20%;
+      height: 20vh;
+      background-color: #f0b909;
+      border: 1px solid #fff;
+      position: relative;
+}
+.gallery-insta .m-width-2{
+      background-color: orangered;
+}
+.gallery-insta .m-width .items .img{
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: 13%;
+}
+.gallery-insta .m-width .items img{
+     cursor: pointer;
+}
+.gallery-insta .m-width p{
+      position: absolute;
+      width: 80%;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+}
+.gallery-insta .m-width .items{
+      visibility: hidden;
+}
+.gallery-insta .m-width:hover .items{
+      visibility: visible;
+}
+.gallery-insta .m-width:hover{
+      background-color: rgba(0, 0, 0, 0.9);
+}
+/*---------MEDIA QUERIES---------*/
+@media (max-width: 576px) { 
+      .gallery-insta .m-width p{
+            display: none;
+      }
+      .gallery-insta .m-width .items .img{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 13%;
+      }      
+}
+@media (max-width: 990px) { 
+      .gallery-insta .m-width,
+      .gallery-insta .m-width-2{
+            flex-grow: 1;
+            width: 30%;
+      }
+}
+ /*--------------------------
+            Footer
+----------------------------*/
+footer{
+      background-color: #000;
+      margin: 0 auto;
+}
+footer a{
+      color: #fff;
+}
+footer a:hover{
+      color: #fff;
+      text-decoration: underline;
+}
+footer .delivery .text-delivery{
+      color: #f0b909;
+}
+footer .delivery ul{
+      list-style: none;
+}
+footer .delivery ul li:nth-child(1) span{
+      margin-left: 47px;
+}
+footer .delivery ul li:nth-child(2) span{
+      margin-left: 42px;
+}
+footer .delivery ul li:nth-child(3) span{
+      margin-left: 22px;
+}
+footer .delivery ul li:nth-child(4) span{
+      margin-left: 37px;
+}
+footer .delivery ul li:nth-child(5) span{
+      margin-left: 57px;
+}
+footer .delivery ul li:nth-child(6) span{
+      margin-left: 40px;
+}
+footer .delivery ul li:nth-child(7) span{
+      margin-left: 50px;
+}
+footer .contact{
+      padding-bottom: 100px;
+}
+footer .contact .whatsapp{
+      border: 3px solid #fff;
+      width: 250px;
+      margin: 10px 0 15px;
+      text-align: center;
+}
+footer .contact a:nth-child(4){
+      display: flex;
+      align-items: center;
+      padding-top: 7px;
+      padding-bottom: 10px;
+}
+footer .contact .bottone-footer{
+      background-color: #fff;
+      padding: 7px 10px;
+      color: #000;
+}
+footer .contact .bottone-footer:hover{
+      text-decoration: none;
+}
+footer .contact p{
+      margin-top: 10px;
+}
+footer .social{
+      padding-bottom: 50px;
+}
+/*---------MEDIA QUERIES---------*/
+@media (max-width: 768px) { 
+      .pos-footer{
+            display: flex;
+            justify-content: center;
+      }  
+}
+ /*--------------------------
+        Modal Order NOW
+----------------------------*/
+.m-modal-dialog-1{
+      margin: 1.20rem 0 0 auto !important;
+}
+.m-order-header{
+      background-color: #000;
+      color: #fff;
+      position: relative;
+}
+.m-order-header button {
+      position: absolute;
+      top: 50%;
+      left: 4%;
+      transform: translateY(-50%);
+      margin: auto auto auto -1rem !important;
+      border-radius: 50%;
+      padding: 5px 10px !important;
+}
+.m-order-body .body-header{
+      background-color: #000;
+      color: #fff;
+}
+.m-order-body .m-cont-row{
+      display: flex;
+      justify-content: center;
+}
+/*----------Form-----------*/
+.m-check{
+      margin-top: -15px;
+}
+.m-check input:checked + label{
+      color: #fff;
+      background-color: #000;
+      padding: 8px;
+}
+.m-check input + label{
+      cursor: pointer;
+}
+/*-------Container Menu------*/
+.items-counter{
+      position: absolute;
+      background-color: #000;
+      color: #fff;
+      top: 0;
+      left: 0;
+      padding: 3px 12px 8px 12px;
+      z-index: 1;
+      border-radius: 0 0 5px 0;
+      font-weight: 600;
+}
+.m-container-menu-custom{
+      position: relative;
+      border: 1px solid rgb(226, 224, 224);
+      border-radius: 4px;
+      padding: 15px 5px;
+      margin-bottom: 30px;
+}
+.m-container-menu-custom h2{
+      font-size: 1.2em;
+      font-weight: 600;
+}
+.m-container-menu-custom p{
+      font-size: 0.9em;
+      font-weight: 500;
+}
+.m-container-menu-custom img{
+      border-radius: 10px;
+}
+.m-container-menu-custom .btn-menu-modal-1{
+      padding: 5px 14px;
+      border: none;
+      margin-right: 20px;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+      border-radius: 5px;
+}
+.m-container-menu-custom .btn-menu-modal-2{
+      padding: 5px 12px;
+      border: none;
+      margin-left: 20px;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+      border-radius: 5px;
+}
+/*per jquery*/
+.m-border{
+      border: 3px solid #000;
+}
+ /*--------------------------
+        Modal Book a Table
+----------------------------*/
+.m-modal-dialog-2{
+      position: absolute;
+      bottom: 3.4%;
+      right: 1%;
+}
+.m-book-content-2{
+      background-color: #000;
+      color: #fff;
+}
+.m-modal-dialog-2 .m-book-header-2{
+      position: relative;
+}
+.m-modal-dialog-2 .m-book-header-2 button {
+      position: absolute;
+      top: 50%;
+      left: 7%;
+      transform: translateY(-50%);
+      margin: auto auto auto -1rem !important;
+      border-radius: 50%;
+      padding: 5px 10px !important;
+}
+.m-book-body-2 .m-cont-row{
+      display: flex;
+      justify-content: center;
+}
+/*--------Accordion--------*/
+.m-container-accordion{
+      width: 267px;
+}
+
+
+ /*--------------------------
+
+        Pagina Contatti
+
+----------------------------*/
+
+
+ /*--------------------------
+            Header
+----------------------------*/
+.m-order-menu-contact{
+      opacity: 0;
+      cursor: default;
+}
+.m-bg-header-contact{
+      background-color: #000 !important;
+      border-bottom: 1px solid #fff;
+
+}
+
+ /*--------------------------
+            Form
+----------------------------*/
+
+.cont-sup-form{
+      /* height: 60vh; */
+      background-color: #000;
+      border-bottom: 1px solid #fff;
+}
+
+/*---------MEDIA QUERIES---------*/
+
+@media (max-width: 576px) { 
+      .cont-sup-form .container-form{
+            padding: 50px 0;
+      }
+}
+@media (min-width: 576px) { 
+      .cont-sup-form .container-form{
+            padding: 50px;
+      }
+}
+@media (min-width: 768px) { 
+      .cont-sup-form .container-form{
+            padding: 100px;
+      }
+}
+@media (min-width: 990px) { 
+      .cont-sup-form .container-form{
+            padding: 150px;
+      }
+}
+
